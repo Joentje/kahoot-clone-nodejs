@@ -18,8 +18,9 @@ var players = new Players();
 //Mongodb setup
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
-var url = "mongodb://mongodb:27017/";
-
+//Mongodb url: mongodb://mongodb:27017/
+var url = 'mongodb://'+ process.env.DATABASE_URL + ':' + process.env.DATABASE_PORT+'/';
+console.log("Mongo url: " + url)
 
 
 app.use(express.static(publicPath));
