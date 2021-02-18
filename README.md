@@ -9,7 +9,7 @@ Multiple games can be ongoing at one time and works with many players per game
 
 - apt install mongodb
 - service mongodb start
-- export DATABASE_URL=localhost && export DATABASE_URL=27017
+- export DATABASE_URL=localhost && export DATABASE_PORT=27017
 - nodejs server/server.js
 
 ### Docker install
@@ -18,7 +18,7 @@ Multiple games can be ongoing at one time and works with many players per game
 ```bash
 docker run -d -p 27017:27017 mongo:4.2
 ```
-- export DATABASE_URL=localhost && export DATABASE_URL=27017
+- export DATABASE_URL=localhost && export DATABASE_PORT=27017
 - nodejs server/server.js
 
 
