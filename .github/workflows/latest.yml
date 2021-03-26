@@ -26,7 +26,7 @@ jobs:
         run: echo ${{ steps.buildx.outputs.name }}
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
-      - name: Build and push
+      - name: Build and push server
         uses: docker/build-push-action@v2
         with:
           context: .
@@ -35,3 +35,12 @@ jobs:
           push: true
           tags: |
             jeroenslot/kahoot-clone-nodejs:latest
+      - name: Build and push mongo
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: mongo/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: |
+            jeroenslot/kahoot-clone-nodejs-mongodb:latest
