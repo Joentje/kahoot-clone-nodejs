@@ -1,3 +1,25 @@
+@keyframes bgcolor {
+    0% {
+        background-color: #dfe230
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
 #answer1{
     background-color: #4CAF50;
     margin: auto;
