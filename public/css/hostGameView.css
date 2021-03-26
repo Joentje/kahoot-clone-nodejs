@@ -76,23 +76,28 @@
 #questionNum{
     font-family: 'Tajawal', sans-serif;
 }
-
-#winner1{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    font-size: 30px;
-    display: none;
-}
-#winner2{
+.winnerText {
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 22px;
     display: none;
 }
+#winner1{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 32px;
+    display: none;
+}
+#winner2{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
 #winner3{
     font-family: 'Raleway', sans-serif;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     display: none;
 }
 #winner4{
