@@ -174,10 +174,9 @@ socket.on('GameOver', function (data) {
     for (let i = 0; i < data.playerScores.length; i++) {
         const p = data.playerScores[i];
         var id = "winner" + i;
-        document.getElementById(id).style.display = "block";
-        if (p.score == -1) {
-            document.getElementById(id).innerHTML = `${i + 1}.`;
-        } else {
+        if (p.score != -1) {
+            // document.getElementById(id).innerHTML = `${i + 1}.`;
+            document.getElementById(id).style.display = "block";
             var img = "";
             if (i == 0){
                 img = '<img src="https://img.icons8.com/officel/452/gold-medal.png" width="60px"></img> ';
