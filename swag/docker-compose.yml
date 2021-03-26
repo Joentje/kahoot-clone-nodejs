@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  mongodb:
+    image: linuxserver/swag:latest
+    cap_add:
+      - NET_ADMIN
+    container_name: swag
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+      - URL=${DOMAIN}
+      - SUBDOMAINS=${SUBDOMAIN}
+      - VALIDATION=http \
+      - ONLY_SUBDOMAINS=false
+    volumes:
+      - /root/kahoot-clone-nodejs/swag/config:/config
+    restart: unless-stopped
+    networks:
+      - kahoot_network
+    ports:
+      - 433:433
+
+networks:
+  default:
+    external:
+      name: kahoot_network
