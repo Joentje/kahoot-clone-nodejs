@@ -123,5 +123,15 @@ socket.on('GameOver', function(data){
     document.getElementById('rankText').innerHTML = `Rank: ${myPlace+1}`
     // document.getElementById('rankText')
 
+    document.getElementsByTagName("body")[0].style.animation = "bgcolor 10s infinite"
+    document.getElementsByTagName("body")[0].style.animationDirection = "alternate"
+
+    // body {
+    //     -webkit-animation: bgcolor 20s infinite;
+    //     animation: bgcolor 10s infinite;
+    //     -webkit-animation-direction: alternate;
+    //     animation-direction: alternate;
+    // }
+
 });
 
