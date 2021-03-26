@@ -91,13 +91,37 @@ socket.on('playerGameData', function(data){
    }
 });
 
-socket.on('GameOver', function(){
+socket.on('GameOver', function(data){
+    console.log("socket id");
+    console.log(socket.id);
+    console.log(data);
+    const myPlace = data.playerScores.findIndex(x => x.playerId === socket.id);
+    const me = data.playerScores[myPlace];
+    console.log(myPlace);
+    console.log(data.totalPlayers);
     document.body.style.backgroundColor = "#FFFFFF";
     document.getElementById('answer1').style.visibility = "hidden";
     document.getElementById('answer2').style.visibility = "hidden";
     document.getElementById('answer3').style.visibility = "hidden";
     document.getElementById('answer4').style.visibility = "hidden";
     document.getElementById('message').style.display = "block";
+    const txt = `You've finished the quiz!<br>Thank you for playing ${me.name}<br><br>You've scored ${me.score} points,<br>which means you have finished as<br>player ${myPlace + 1} out of ${data.totalPlayers} players`
     document.getElementById('message').innerHTML = "GAME OVER";
+    document.getElementById('message').innerHTML = txt;
+
+    document.getElementById('nameText').style.visibility = "hidden";
+    document.getElementById('rankText').style.visibility = "hidden";
+    document.getElementById('scoreText').style.visibility = "hidden";
+    // document.getElementById('nameText').style.fontSize = "35px";
+    // document.getElementById('nameText').style.textAlign = "center";
+    // document.getElementById('scoreText').style.fontSize = "35px";
+    // document.getElementById('scoreText').style.textAlign = "center";
+    // document.getElementById('rankText').style.fontSize = "35px";
+    // document.getElementById('rankText').style.textAlign = "center";
+
+    // document.getElementById('rankText').style.display
+    document.getElementById('rankText').innerHTML = `Rank: ${myPlace+1}`
+    // document.getElementById('rankText')
+
 });
 
