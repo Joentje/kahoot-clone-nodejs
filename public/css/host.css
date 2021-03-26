@@ -48,7 +48,7 @@ body {
     resize: none;
 }
 
-#start{
+.bttn{
     background-color: #3A3B3A;
     border: none;
     color: white;
@@ -63,5 +63,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 25px;
+    width: 500px;
     /* font-family: 'Raleway', sans-serif; */
 }
