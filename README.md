@@ -28,7 +28,6 @@ docker run -d -p 27017:27017 mongo:4.2
 
 With Mongo Express you can import the game
 
-
 ### Todo
 
 - [ ] Styling

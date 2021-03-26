@@ -5,6 +5,8 @@ services:
       context: mongo
       dockerfile: Dockerfile
     image: jeroenslot/kahoot-clone-nodejs-mongodb:latest
+    networks:
+      - kahoot_network
     environment:
       - MONGO_INITDB_DATABASE=kahootDB
     #   - MONGO_INITDB_ROOT_USERNAME=root
@@ -14,6 +16,8 @@ services:
   kahoot:
     build: .
     image: jeroenslot/kahoot-clone-nodejs:latest
+    networks:
+      - kahoot_network
     ports:
       - 3111:3111
   mongo-express:
@@ -26,7 +30,13 @@ services:
       # - ME_CONFIG_MONGODB_ADMINPASSWORD=root
       # - ME_CONFIG_BASICAUTH_USERNAME=root
       # - ME_CONFIG_BASICAUTH_PASSWORD=root
+    networks:
+      - kahoot_network
     depends_on:
       - mongodb
     ports:
       - "7052:8081"
+
+networks:
+  kahoot_network:
+    name: kahoot_network
