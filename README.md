@@ -28,12 +28,12 @@ docker run -d -p 27017:27017 mongo:4.2
 
 With Mongo Express you can import the game
 
-
 ### Todo
 
 - [ ] Styling
 - [ ] HTTPS
 - [x] Domain
+- [x] Host a kahoot somewhere else
 - [x] Questions left
 - [ ] Use a picture in a question
 - [x] Endscore (top 10)
@@ -45,8 +45,14 @@ With Mongo Express you can import the game
 - [ ] Multistage build and remove node_modules
 - [x] Ranks @player side
 - [ ] Create game, somewhere else
-- [ ] Cancel game button somewhere else
+- [x] Cancel game button somewhere else
 - [ ] Favicon
+- [ ] make timer variable at quiz creation
+- [ ] Timer, custom timer per question?
+- [ ] add credentials to mongo-express
+- [ ] cleanup readme
+- [ ] refactor HTML/CSS/JS folders
+- [ ] Unify styling by Bootstrap
 
 ## Screenshots
 

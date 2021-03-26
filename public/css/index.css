@@ -25,8 +25,10 @@ body {
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    font-family: 'Raleway', sans-serif;
 }
 #title{
+    padding-top: 25px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 50px;
@@ -62,7 +64,7 @@ body {
     display: block;
     text-align: center;
     font-size: 25px;
-    font-family: 'Raleway', sans-serif;
+
     color: white;
 }
 #host{
@@ -74,17 +76,16 @@ body {
 }
 #joinButton{
     width: 50%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    /* padding: 14px 20px; */
+    /* margin: 8px 0; */
+    /* border: none; */
+    /* border-radius: 4px; */
+    /* cursor: pointer; */
     display: block;
     margin-right: auto;
     margin-left: auto;
-    font-size: 20px;
-    background-color: #3A3B3A;
-    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    /* background-color: #3A3B3A; */
 }
