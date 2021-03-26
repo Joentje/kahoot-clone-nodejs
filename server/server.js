@@ -392,82 +392,98 @@ io.on('connection', (socket) => {
                     db.close();
                 } else {
                     var playersInGame = players.getPlayers(game.hostId);
-                    var first = { name: "", score: 0 };
-                    var second = { name: "", score: 0 };
-                    var third = { name: "", score: 0 };
-                    var fourth = { name: "", score: 0 };
-                    var fifth = { name: "", score: 0 };
+                    // var first = { name: "", score: 0 };
+                    // var second = { name: "", score: 0 };
+                    // var third = { name: "", score: 0 };
+                    // var fourth = { name: "", score: 0 };
+                    // var fifth = { name: "", score: 0 };
                     console.log(JSON.stringify(playersInGame))
-                    for (var i = 0; i < playersInGame.length; i++) {
-                        //console.log(playersInGame[i].gameData.score);
-                        if (playersInGame[i].gameData.score > fifth.score) {
-                            if (playersInGame[i].gameData.score > fourth.score) {
-                                if (playersInGame[i].gameData.score > third.score) {
-                                    if (playersInGame[i].gameData.score > second.score) {
-                                        if (playersInGame[i].gameData.score > first.score) {
-                                            //First Place
-                                            fifth.name = fourth.name;
-                                            fifth.score = fourth.score;
+                    playersInGame.forEach(x => {
+                        console.log(`unSorted Player: ${x.name} - ${x.gameData.score}`)
+                    })
+                    playersInGame.sort(function(a,b){
+                        return b.gameData.score - a.gameData.score;
+                    });
+                    playersInGame.forEach(x => {
+                        console.log(`isSorted Player: ${x.name} - ${x.gameData.score}`)
+                    })
+                    var scores = []
 
-                                            fourth.name = third.name;
-                                            fourth.score = third.score;
-
-                                            third.name = second.name;
-                                            third.score = second.score;
-
-                                            second.name = first.name;
-                                            second.score = first.score;
-
-                                            first.name = playersInGame[i].name;
-                                            first.score = playersInGame[i].gameData.score;
-                                        } else {
-                                            //Second Place
-                                            fifth.name = fourth.name;
-                                            fifth.score = fourth.score;
-
-                                            fourth.name = third.name;
-                                            fourth.score = third.score;
-
-                                            third.name = second.name;
-                                            third.score = second.score;
-
-                                            second.name = playersInGame[i].name;
-                                            second.score = playersInGame[i].gameData.score;
-                                        }
-                                    } else {
-                                        //Third Place
-                                        fifth.name = fourth.name;
-                                        fifth.score = fourth.score;
-
-                                        fourth.name = third.name;
-                                        fourth.score = third.score;
-
-                                        third.name = playersInGame[i].name;
-                                        third.score = playersInGame[i].gameData.score;
-                                    }
-                                } else {
-                                    //Fourth Place
-                                    fifth.name = fourth.name;
-                                    fifth.score = fourth.score;
-
-                                    fourth.name = playersInGame[i].name;
-                                    fourth.score = playersInGame[i].gameData.score;
-                                }
-                            } else {
-                                //Fifth Place
-                                fifth.name = playersInGame[i].name;
-                                fifth.score = playersInGame[i].gameData.score;
-                            }
+                    for (var i = 0; i < 10; i++){
+                        var player = playersInGame[i];
+                        if (player){
+                            scores.push({name: player.name, score: player.gameData.score});
+                        } else {
+                            scores.push({name: "", score: -1});
                         }
                     }
+                    console.log("scores");
+                    console.log(scores);
+                    console.log(JSON.stringify(scores));
+                    // for (var i = 0; i < playersInGame.length; i++) {
+                    //     //console.log(playersInGame[i].gameData.score);
+                    //     if (playersInGame[i].gameData.score > fifth.score) {
+                    //         if (playersInGame[i].gameData.score > fourth.score) {
+                    //             if (playersInGame[i].gameData.score > third.score) {
+                    //                 if (playersInGame[i].gameData.score > second.score) {
+                    //                     if (playersInGame[i].gameData.score > first.score) {
+                    //                         //First Place
+                    //                         fifth.name = fourth.name;
+                    //                         fifth.score = fourth.score;
 
-                    io.to(game.pin).emit('GameOver', {
-                        num1: first.name,
-                        num2: second.name,
-                        num3: third.name,
-                        num4: fourth.name,
-                        num5: fifth.name
-                    });
+                    //                         fourth.name = third.name;
+                    //                         fourth.score = third.score;
+
+                    //                         third.name = second.name;
+                    //                         third.score = second.score;
+
+                    //                         second.name = first.name;
+                    //                         second.score = first.score;
+
+                    //                         first.name = playersInGame[i].name;
+                    //                         first.score = playersInGame[i].gameData.score;
+                    //                     } else {
+                    //                         //Second Place
+                    //                         fifth.name = fourth.name;
+                    //                         fifth.score = fourth.score;
+
+                    //                         fourth.name = third.name;
+                    //                         fourth.score = third.score;
+
+                    //                         third.name = second.name;
+                    //                         third.score = second.score;
+
+                    //                         second.name = playersInGame[i].name;
+                    //                         second.score = playersInGame[i].gameData.score;
+                    //                     }
+                    //                 } else {
+                    //                     //Third Place
+                    //                     fifth.name = fourth.name;
+                    //                     fifth.score = fourth.score;
+
+                    //                     fourth.name = third.name;
+                    //                     fourth.score = third.score;
+
+                    //                     third.name = playersInGame[i].name;
+                    //                     third.score = playersInGame[i].gameData.score;
+                    //                 }
+                    //             } else {
+                    //                 //Fourth Place
+                    //                 fifth.name = fourth.name;
+                    //                 fifth.score = fourth.score;
+
+                    //                 fourth.name = playersInGame[i].name;
+                    //                 fourth.score = playersInGame[i].gameData.score;
+                    //             }
+                    //         } else {
+                    //             //Fifth Place
+                    //             fifth.name = playersInGame[i].name;
+                    //             fifth.score = playersInGame[i].gameData.score;
+                    //         }
+                    //     }
+                    // }
+
+                    io.to(game.pin).emit('GameOver', scores);
                 }
             });
         });
