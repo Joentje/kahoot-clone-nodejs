@@ -22,7 +22,12 @@
 
 html, body { height: 90%; padding: 0; margin: 0; }
 button{
-    width: 50%; height: 50%; float: left;
+    border-radius: 15px;
+    margin: 1%;
+    width: 48%; 
+    height: 48%; 
+    float: left;
+    border: none;
 }
 #answer1{
     background-color: #4CAF50;
@@ -43,6 +48,7 @@ button{
 #nameText, #rankText, #scoreText{
     font-family: 'Raleway', sans-serif;
     padding: 0px 10px;
+    font-size: 25px;
 }
 
 #message{
