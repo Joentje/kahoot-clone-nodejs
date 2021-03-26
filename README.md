@@ -41,6 +41,7 @@ With Mongo Express you can import the game
 - [x] Example questions
 - [ ] Create db and collection
 - [ ] Multistage build and remove node_modules
+- [ ] Ranks @player side
 
 ## Screenshots
 
