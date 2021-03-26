@@ -47,6 +47,8 @@ With Mongo Express you can import the game
 - [ ] Create game, somewhere else
 - [x] Cancel game button somewhere else
 - [ ] Favicon
+- [ ] make timer variable at quiz creation
+- [ ] Timer, custom timer per question?
 
 ## Screenshots
 
