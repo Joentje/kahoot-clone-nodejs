@@ -31,6 +31,8 @@ docker run -d -p 27017:27017 mongo:4.2
 - [ ] Questions left
 - [ ] Use a picture in a question
 - [ ] Endscore (top 10)
+- [x] Example questions
+- [ ] Create db and collection
 
 ## Screenshots
 

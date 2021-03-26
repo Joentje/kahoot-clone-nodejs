@@ -2,13 +2,15 @@ version: '3.7'
 services:
   mongodb:
     image: mongo:4.2
+    environment:
+      - MONGO_INITDB_DATABASE=kahootDB
     ports:
       - 27017:27017
   kahoot:
     build: .
     image: jeroenslot/kahoot-clone-nodejs:latest
     ports:
-      - 3000:3000
+      - 3111:3111
   mongo-express:
     image: mongo-express:0.54.0
     environment:
