@@ -28,11 +28,15 @@ docker run -d -p 27017:27017 mongo:4.2
 - [ ] HTTPS
 - [ ] Domain
 - [ ] Host a kahoot somewhere else
-- [ ] Questions left
+- [x] Questions left
 - [ ] Use a picture in a question
-- [ ] Endscore (top 10)
+- [x] Endscore (top 10)
 - [x] Example questions
 - [ ] Create db and collection
+- [ ] current rank during game
+- [ ] fancy up the white screens
+- [ ] more fancy button on NextQuestion during gameHost
+- [ ] increase all font sizes
 
 ## Screenshots
 
