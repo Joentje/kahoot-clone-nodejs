@@ -20,7 +20,7 @@ var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 //Mongodb url: mongodb://mongodb:27017/
 var url = 'mongodb://' + process.env.DATABASE_URL + ':' + process.env.DATABASE_PORT + '/';
-//url = 'mongodb://localhost:27017/'
+// url = 'mongodb://localhost:27017/'
 console.log("Mongo url: " + url)
 
 
@@ -397,17 +397,17 @@ io.on('connection', (socket) => {
                     // var third = { name: "", score: 0 };
                     // var fourth = { name: "", score: 0 };
                     // var fifth = { name: "", score: 0 };
-                    console.log(JSON.stringify(playersInGame))
+                    console.log(JSON.stringify(playersInGame));
                     playersInGame.forEach(x => {
-                        console.log(`unSorted Player: ${x.name} - ${x.gameData.score}`)
-                    })
+                        console.log(`unSorted Player: ${x.name} - ${x.gameData.score}`);
+                    });
                     playersInGame.sort(function(a,b){
                         return b.gameData.score - a.gameData.score;
                     });
                     playersInGame.forEach(x => {
-                        console.log(`isSorted Player: ${x.name} - ${x.gameData.score}`)
-                    })
-                    var scores = []
+                        console.log(`isSorted Player: ${x.name} - ${x.gameData.score}`);
+                    });
+                    var scores = [];
 
                     for (var i = 0; i < 10; i++){
                         var player = playersInGame[i];
@@ -417,9 +417,6 @@ io.on('connection', (socket) => {
                             scores.push({name: "", score: -1});
                         }
                     }
-                    console.log("scores");
-                    console.log(scores);
-                    console.log(JSON.stringify(scores));
                     // for (var i = 0; i < playersInGame.length; i++) {
                     //     //console.log(playersInGame[i].gameData.score);
                     //     if (playersInGame[i].gameData.score > fifth.score) {
@@ -482,7 +479,6 @@ io.on('connection', (socket) => {
                     //         }
                     //     }
                     // }
-
                     io.to(game.pin).emit('GameOver', scores);
                 }
             });
