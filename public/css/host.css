@@ -30,6 +30,7 @@ body {
 #title{
     color:white;
     /* font-family: 'Raleway', sans-serif; */
+    padding-top: 25px;
     font-size: 35px;
     text-align: center;
 }
@@ -48,21 +49,22 @@ body {
     resize: none;
 }
 
-.bttn{
-    background-color: #3A3B3A;
-    border: none;
-    color: white;
+#start, #cancel{
+    /* background-color: #3A3B3A; */
+    /* border: none; */
+    /* color: white; */
     padding: 15px 100px;
-    text-align: center;
-    text-decoration: none;
+    /* text-align: center; */
+    /* text-decoration: none; */
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    /* font-size: 16px; */
+    /* margin: 4px 2px; */
+    /* cursor: pointer; */
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     font-size: 25px;
     width: 500px;
     /* font-family: 'Raleway', sans-serif; */
-}
+} 
