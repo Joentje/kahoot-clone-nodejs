@@ -18,14 +18,11 @@ button{
 #buttons{
     text-align: center;
 }
-#nameText{
+#nameText, #rankText, #scoreText{
     font-family: 'Raleway', sans-serif;
     padding: 0px 10px;
 }
-#scoreText{
-    font-family: 'Raleway', sans-serif;
-    padding: 0px 10px;
-}
+
 #message{
     font-family: 'Raleway', sans-serif;
     text-align: center;

@@ -19,15 +19,29 @@ var input =
 input.sort(function (a, b) {
     return b.gameData.score - a.gameData.score
 });
-console.log("sorted")
+// console.log("sorted")
 
 // input.forEach(x => {
 //     console.log(`${x.name} - ${x.gameData.score}`)
 // })
 for (var i = 0; i < 10; i++) {
     var player = input[i];
-    console.log(player)
+    // console.log(player)
     if (player) {
-        console.log(`${player.name} - ${player.gameData.score}`)
+        console.log(`${i} | ${player.name} - ${player.gameData.score}`)
     }
 }
+
+// const myPlace = input.findIndex( x => {
+//     console.log(x.name);
+//     var name = x.name.trim().toUpperCase();
+//     var me = "Tom".trim().toUpperCase();
+//     console.log(name);
+//     console.log(me);
+//     console.log(name == me);
+//     console.log(name === me);
+//     x.name.trim().toUpperCase() === "Tom".toUpperCase();
+// })
+const myPlace2 = input.findIndex(x => x.name.trim().toLowerCase() == "tom");
+// console.log(myPlace);
+console.log(myPlace2);

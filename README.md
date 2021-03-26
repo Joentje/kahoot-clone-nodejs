@@ -35,11 +35,14 @@ With Mongo Express you can import the game
 - [ ] HTTPS
 - [ ] Domain
 - [ ] Host a kahoot somewhere else
-- [ ] Questions left
+- [x] Questions left
 - [ ] Use a picture in a question
-- [ ] Endscore (top 10)
+- [x] Endscore (top 10)
 - [x] Example questions
 - [ ] Create db and collection
+- [ ] fancy up the white screens
+- [ ] more fancy button on NextQuestion during gameHost
+- [ ] increase all font sizes
 - [ ] Multistage build and remove node_modules
 - [ ] Ranks @player side
 
