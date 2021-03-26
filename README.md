@@ -41,10 +41,12 @@ With Mongo Express you can import the game
 - [x] Example questions
 - [x] Create db and collection
 - [x] fancy up the white screens
-- [ ] more fancy button on NextQuestion during gameHost
+- [x] more fancy button on NextQuestion during gameHost
 - [ ] increase all font sizes
 - [ ] Multistage build and remove node_modules
 - [x] Ranks @player side
+- [ ] Create game, somewhere else
+- [ ] Cancel game button somewhere else
 
 ## Screenshots
 
