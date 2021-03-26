@@ -20,7 +20,7 @@ var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 //Mongodb url: mongodb://mongodb:27017/
 var url = 'mongodb://' + process.env.DATABASE_URL + ':' + process.env.DATABASE_PORT + '/';
-url = 'mongodb://localhost:27017/'
+// url = 'mongodb://localhost:27017/'
 console.log("Mongo url: " + url)
 
 
@@ -300,7 +300,26 @@ io.on('connection', (socket) => {
 
     socket.on('getScore', function () {
         var player = players.getPlayer(socket.id);
-        socket.emit('newScore', player.gameData.score);
+        // console.log("all players before giving back the new score")
+        // console.log(socket)
+        // console.log(socket.id)
+        // console.log(players)
+        var hostId = player.hostId;
+        var playersInGame = players.getPlayers(hostId)
+        // console.log(`hostid: ${hostId}`)
+        // console.log(`players in game: ${playersInGame}`)
+
+        playersInGame.sort(function(a,b){
+            return b.gameData.score - a.gameData.score;
+        });
+        const playerPlace = (playersInGame.findIndex(x => x.playerId === socket.id))+1;
+
+        const playerScore = {
+            playerId: socket.id,
+            score: player.gameData.score,
+            rank: playerPlace
+        }
+        socket.emit('newScore', playerScore);
     });
 
     socket.on('time', function (data) {
