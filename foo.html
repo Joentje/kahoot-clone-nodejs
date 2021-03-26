@@ -8,45 +8,77 @@
     <title>Document</title>
 </head>
 <style>
-    html, body { height: 90%; padding: 0; margin: 0; }
-    .square{
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    width: 70px;
-    height: 0px;
-    font-size: 20px;
-}
-.squaretxt {
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    width: 70px;
-    height: 0px;
-    font-size: 20px;
-}
+    @keyframes bgcolor {
+        0% {
+            background-color: #45a3e5
+        }
+
+        30% {
+            background-color: #66bf39
+        }
+
+        60% {
+            background-color: #eb670f
+        }
+
+        90% {
+            background-color: #f35
+        }
+
+        100% {
+            background-color: #864cbf
+        }
+    }
+
+    html,
+    body {
+        height: 90%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .square {
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        width: 70px;
+        height: 0px;
+        font-size: 20px;
+    }
+
+    .squaretxt {
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        width: 70px;
+        height: 0px;
+        font-size: 20px;
+    }
 
 
-#square1{
-    background-color: #4CAF50;
-}
-#square2{
-    background-color: #f94a1e;
-}
-#square3{
-    background-color: #3399ff;
-}
-#square4{
-    background-color: #ff9933;
-}
+    #square1 {
+        background-color: #4CAF50;
+    }
+
+    #square2 {
+        background-color: #f94a1e;
+    }
+
+    #square3 {
+        background-color: #3399ff;
+    }
+
+    #square4 {
+        background-color: #ff9933;
+    }
 </style>
 
 <body>
@@ -62,6 +94,8 @@
 
 
     <div class="txt" id="msg"></div>
+
+    <button onclick="myFunction()">Click me</button>
     <script>
         // var total = 2;
         // var answer1 = 2;
@@ -90,6 +124,12 @@
         // document.getElementById('square3txt').innerHTML = answer3;
         // document.getElementById('square4').style.height = answer4pct + "px";
         // document.getElementById('square4txt').innerHTML = answer4;
+        function myFunction() {
+            console.log("clicked")
+            document.getElementsByTagName("body")[0].style.animation = "bgcolor 10s infinite"
+            document.getElementsByTagName("body")[0].style.animationDirection = "alternate"
+        }
+
     </script>
 </body>
 
