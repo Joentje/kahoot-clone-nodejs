@@ -170,12 +170,16 @@ socket.on('GameOver', function (data) {
     // document.getElementById('winner5').style.display = "block";
     document.getElementById('winnerTitle').style.display = "block";
 
+
     for (let i = 0; i < data.length; i++) {
-        const p = data[i]
-        var id = "winner" + i
+        const p = data[i];
+        var id = "winner" + i;
         document.getElementById(id).style.display = "block";
-        console.log("element: " + element)
-        document.getElementById(id).innerHTML = `${i}. ${p.name} (${p.score})`
+        if (p.score == -1) {
+            document.getElementById(id).innerHTML = `${i + 1}.`;
+        } else {
+            document.getElementById(id).innerHTML = `${i + 1}. ${p.name} (${p.score})`;
+        }
     }
 
     // for (let i = 0; i < 10; i++) {
