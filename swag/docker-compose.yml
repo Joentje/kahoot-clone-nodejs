@@ -19,6 +19,7 @@ services:
     networks:
       - kahoot_network
     ports:
+      - 80:80
       - 433:433
 
 networks:
