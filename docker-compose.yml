@@ -6,5 +6,18 @@ services:
       - 27017:27017
   kahoot:
     build: .
+    image: jeroenslot/kahoot-clone-nodejs:latest
     ports:
       - 3000:3000
+  mongo-express:
+    image: mongo-express:0.54.0
+    environment:
+      - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
+      # - ME_CONFIG_BASICAUTH_USERNAME={{ mongo_express_user }}
+      # - ME_CONFIG_BASICAUTH_PASSWORD={{ mongo_express_pass }}
+    depends_on:
+      - mongodb
+    ports:
+      - "7052:8081"
