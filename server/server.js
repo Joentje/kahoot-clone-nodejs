@@ -129,7 +129,7 @@ io.on('connection', (socket) => {
                     // document.getElementById('questionNum').innerHTML=`Question 1 / ${res[0].questions.length}`
                     console.log(JSON.stringify(res));
                     console.log(res[0].questions.length);
-                    nrOfQuestions = res[0].questions.length;
+                    var nrOfQuestions = res[0].questions.length;
                     console.log("send socket nr of questions: " + nrOfQuestions);
                     socket.emit("receivedTotalNrOfQuestions", { cur: 1, total: nrOfQuestions });
                     var question = res[0].questions[0].question;
@@ -390,7 +390,7 @@ io.on('connection', (socket) => {
                     var questionNum = game.gameData.question;
                     questionNum = questionNum - 1;
 
-                    nrOfQuestions = res[0].questions.length;
+                    var nrOfQuestions = res[0].questions.length;
                     console.log("send socket nr of questions: " + nrOfQuestions);
                     console.log("current question num: " + questionNum);
                     console.log("current question num: " + game.gameData.question);
