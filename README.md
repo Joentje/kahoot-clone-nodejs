@@ -22,6 +22,16 @@ docker run -d -p 27017:27017 mongo:4.2
 - nodejs server/server.js
 
 
+### Todo
+
+- [ ] Styling
+- [ ] HTTPS
+- [ ] Domain
+- [ ] Host a kahoot somewhere else
+- [ ] Questions left
+- [ ] Use a picture in a question
+- [ ] Endscore (top 10)
+
 ## Screenshots
 
 <img src="Screenshots/join.png" height="200" width="auto" alt="Player Join"/>
