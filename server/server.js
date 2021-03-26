@@ -1,4 +1,7 @@
 //Import dependencies
+const dotenv = require('dotenv');
+dotenv.config();
+
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -19,8 +22,9 @@ var players = new Players();
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 //Mongodb url: mongodb://mongodb:27017/
+
 var url = 'mongodb://' + process.env.DATABASE_URL + ':' + process.env.DATABASE_PORT + '/';
-// url = 'mongodb://localhost:27017/'
+
 console.log("Mongo url: " + url)
 
 
