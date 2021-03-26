@@ -46,7 +46,7 @@ With Mongo Express you can import the game
 - [ ] Multistage build and remove node_modules
 - [x] Ranks @player side
 - [ ] Create game, somewhere else
-- [ ] Cancel game button somewhere else
+- [x] Cancel game button somewhere else
 - [ ] Favicon
 
 ## Screenshots
