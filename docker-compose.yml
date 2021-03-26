@@ -9,8 +9,6 @@ services:
       - MONGO_INITDB_DATABASE=kahootDB
     #   - MONGO_INITDB_ROOT_USERNAME=root
     #   - MONGO_INITDB_ROOT_PASSWORD=root
-    volumes:
-      - /home/jeroen/workspace/kahoot-clone-nodejs/mongo/:/docker-entrypoint-initdb.d
     ports:
       - 27017:27017
   kahoot:
