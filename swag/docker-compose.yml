@@ -14,7 +14,7 @@ services:
       - VALIDATION=http \
       - ONLY_SUBDOMAINS=false
     volumes:
-      - /root/kahoot-clone-nodejs/swag/config:/config
+      - ./config:/config
     restart: unless-stopped
     networks:
       - kahoot_network
