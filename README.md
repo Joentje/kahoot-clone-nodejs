@@ -49,6 +49,10 @@ With Mongo Express you can import the game
 - [ ] Favicon
 - [ ] make timer variable at quiz creation
 - [ ] Timer, custom timer per question?
+- [ ] add credentials to mongo-express
+- [ ] cleanup readme
+- [ ] refactor HTML/CSS/JS folders
+- [ ] Unify styling by Bootstrap
 
 ## Screenshots
 
