@@ -1,0 +1,41 @@
+[
+    {
+        "_id": {
+            "$oid": "605da2d5639a6b000625cb3f"
+        },
+        "id": 1,
+        "name": "The best quiz",
+        "questions": [
+            {
+                "question": "Wat is geen saus?",
+                "answers": [
+                    "Béarnaise",
+                    "Marseillaise",
+                    "Choron",
+                    "Ravigotte"
+                ],
+                "correct": "2"
+            },
+            {
+                "question": "Bij welke sport wordt soms heel hard geroepen: One hundred and eighty! ",
+                "answers": [
+                    "Kogelstoten",
+                    "Voetbal",
+                    "Darten",
+                    "Klassiek ballet"
+                ],
+                "correct": "3"
+            },
+            {
+                "question": "Welk fruit is vernoemd naar een vogel?",
+                "answers": [
+                    "Durian",
+                    "Parrots",
+                    "Pink Lady",
+                    "Kiwi"
+                ],
+                "correct": "4"
+            }
+        ]
+    }
+]
