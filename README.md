@@ -44,7 +44,7 @@ With Mongo Express you can import the game
 - [ ] more fancy button on NextQuestion during gameHost
 - [ ] increase all font sizes
 - [ ] Multistage build and remove node_modules
-- [ ] Ranks @player side
+- [x] Ranks @player side
 
 ## Screenshots
 
