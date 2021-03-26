@@ -1,5 +1,6 @@
 {
-    "id": ObjectID(),
+    "_id": ObjectID(),
+    "id": 1,
     "name": "The best game",
     "questions": [
         {
