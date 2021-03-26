@@ -8,9 +8,13 @@ var time = 20;
 
 //When host connects to server
 socket.on('connect', function() {
-    
+    // socket.emit('getTotalNrOfQuestions', params);
     //Tell server that it is host connection from game view
     socket.emit('host-join-game', params);
+});
+socket.on('receivedTotalNrOfQuestions', (data) => {
+    console.log("received the nr of questions: " + data)
+    document.getElementById('questionNum').innerHTML=`Question ${data.cur} / ${data.total}`
 });
 
 socket.on('noGameFound', function(){
@@ -84,20 +88,28 @@ socket.on('questionOver', function(playerData, correct){
     }
     
     //Gets values for graph
-    answer1 = answer1 / total * 100;
-    answer2 = answer2 / total * 100;
-    answer3 = answer3 / total * 100;
-    answer4 = answer4 / total * 100;
+    var answer1pct = answer1 / total * 100;
+    var answer2pct = answer2 / total * 100;
+    var answer3pct = answer3 / total * 100;
+    var answer4pct = answer4 / total * 100;
     
     document.getElementById('square1').style.display = "inline-block";
     document.getElementById('square2').style.display = "inline-block";
     document.getElementById('square3').style.display = "inline-block";
     document.getElementById('square4').style.display = "inline-block";
-    
-    document.getElementById('square1').style.height = answer1 + "px";
-    document.getElementById('square2').style.height = answer2 + "px";
-    document.getElementById('square3').style.height = answer3 + "px";
-    document.getElementById('square4').style.height = answer4 + "px";
+    document.getElementById('square1txt').style.display = "inline-block";
+    document.getElementById('square2txt').style.display = "inline-block";
+    document.getElementById('square3txt').style.display = "inline-block";
+    document.getElementById('square4txt').style.display = "inline-block";
+
+    document.getElementById('square1').style.height = answer1pct + "px";
+    document.getElementById('square1txt').innerHTML = answer1;
+    document.getElementById('square2').style.height = answer2pct + "px";
+    document.getElementById('square2txt').innerHTML = answer2;
+    document.getElementById('square3').style.height = answer3pct + "px";
+    document.getElementById('square3txt').innerHTML = answer3;
+    document.getElementById('square4').style.height = answer4pct + "px";
+    document.getElementById('square4txt').innerHTML = answer4;
     
     document.getElementById('nextQButton').style.display = "block";
     
@@ -109,6 +121,10 @@ function nextQuestion(){
     document.getElementById('square2').style.display = "none";
     document.getElementById('square3').style.display = "none";
     document.getElementById('square4').style.display = "none";
+    document.getElementById('square1txt').style.display = "none";
+    document.getElementById('square2txt').style.display = "none";
+    document.getElementById('square3txt').style.display = "none";
+    document.getElementById('square4txt').style.display = "none";
     
     document.getElementById('answer1').style.filter = "none";
     document.getElementById('answer2').style.filter = "none";
@@ -133,6 +149,7 @@ function updateTimer(){
 }
 socket.on('GameOver', function(data){
     document.getElementById('nextQButton').style.display = "none";
+    document.getElementById('questionNum').style.display = 'none';
     document.getElementById('square1').style.display = "none";
     document.getElementById('square2').style.display = "none";
     document.getElementById('square3').style.display = "none";
