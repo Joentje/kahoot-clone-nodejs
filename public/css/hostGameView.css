@@ -126,8 +126,8 @@
 #winnerTitle{
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 60px;
+    font-weight: bolder;
     color: #3399ff;
     display: none;
 }
