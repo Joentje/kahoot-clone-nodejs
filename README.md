@@ -47,6 +47,7 @@ With Mongo Express you can import the game
 - [x] Ranks @player side
 - [ ] Create game, somewhere else
 - [ ] Cancel game button somewhere else
+- [ ] Favicon
 
 ## Screenshots
 
