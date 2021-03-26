@@ -171,14 +171,22 @@ socket.on('GameOver', function (data) {
     document.getElementById('winnerTitle').style.display = "block";
 
 
-    for (let i = 0; i < data.length; i++) {
-        const p = data[i];
+    for (let i = 0; i < data.playerScores.length; i++) {
+        const p = data.playerScores[i];
         var id = "winner" + i;
         document.getElementById(id).style.display = "block";
         if (p.score == -1) {
             document.getElementById(id).innerHTML = `${i + 1}.`;
         } else {
-            document.getElementById(id).innerHTML = `${i + 1}. ${p.name} (${p.score})`;
+            var img = "";
+            if (i == 0){
+                img = '<img src="https://img.icons8.com/officel/452/gold-medal.png" width="60px"></img> ';
+            } else if (i == 1) {
+                img = '<img src="https://img.icons8.com/officel/452/silver-medal.png" width="50px"></img> ';
+            } else if (i == 2) {
+                img = '<img src="https://img.icons8.com/officel/452/bronze-medal.png" width="40px"></img> ';
+            }
+            document.getElementById(id).innerHTML = `${i + 1}. ${img}${p.name} (${p.score})`;
         }
     }
 
