@@ -82,34 +82,25 @@
     font-size: 22px;
     display: none;
 }
-#winner1{
+#winner0{
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 32px;
     display: none;
 }
-#winner2{
+#winner1{
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 30px;
     display: none;
 }
-#winner3{
+#winner2{
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 25px;
     display: none;
 }
-#winner4{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    display: none;
-}
-#winner5{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    display: none;
-}
+
 #winnerTitle{
     text-align: center;
     font-family: 'Raleway', sans-serif;
