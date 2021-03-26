@@ -21,6 +21,13 @@ docker run -d -p 27017:27017 mongo:4.2
 - export DATABASE_URL=localhost && export DATABASE_PORT=27017
 - nodejs server/server.js
 
+### Mongodb
+
+- DB: kahootDB
+- Collection: kahootGames
+
+With Mongo Express you can import the game
+
 
 ### Todo
 
@@ -33,6 +40,7 @@ docker run -d -p 27017:27017 mongo:4.2
 - [ ] Endscore (top 10)
 - [x] Example questions
 - [ ] Create db and collection
+- [ ] Multistage build and remove node_modules
 
 ## Screenshots
 
