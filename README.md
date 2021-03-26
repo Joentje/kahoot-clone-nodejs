@@ -33,8 +33,7 @@ With Mongo Express you can import the game
 
 - [ ] Styling
 - [ ] HTTPS
-- [ ] Domain
-- [ ] Host a kahoot somewhere else
+- [x] Domain
 - [x] Questions left
 - [ ] Use a picture in a question
 - [x] Endscore (top 10)
