@@ -189,6 +189,9 @@ socket.on('GameOver', function (data) {
             document.getElementById(id).innerHTML = `${i + 1}. ${img}${p.name} (${p.score})`;
         }
     }
+    document.getElementsByTagName("body")[0].style.animation = "bgcolor 10s infinite"
+    document.getElementsByTagName("body")[0].style.animationDirection = "alternate"
+
 
     // for (let i = 0; i < 10; i++) {
     //     const element = data[i]
