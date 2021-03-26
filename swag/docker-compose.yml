@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  mongodb:
+  swag:
     image: linuxserver/swag:latest
     cap_add:
       - NET_ADMIN
