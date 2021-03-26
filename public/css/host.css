@@ -25,17 +25,18 @@ body {
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    font-family: 'Raleway', sans-serif;
 }
 #title{
     color:white;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
     font-size: 35px;
     text-align: center;
 }
 #gamePinText{
     text-align: center;
     color: white;
-    font-family: 'Tajawal', sans-serif;
+    /* font-family: 'Tajawal', sans-serif; */
     font-size: 50px;
 }
 #players{
@@ -62,5 +63,5 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 25px;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
 }
