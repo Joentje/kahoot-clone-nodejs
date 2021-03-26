@@ -62,7 +62,10 @@ socket.on('questionOver', function(data){
 });
 
 socket.on('newScore', function(data){
-    document.getElementById('scoreText').innerHTML = "Score: " + data;
+    const score = data.score;
+    const rank = data.rank;
+    document.getElementById('scoreText').innerHTML = "Score: " + score;
+    document.getElementById('rankText').innerHTML = "Current Rank: " + rank;
 });
 
 socket.on('nextQuestionPlayer', function(){
