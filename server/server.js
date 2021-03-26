@@ -20,7 +20,7 @@ var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 //Mongodb url: mongodb://mongodb:27017/
 var url = 'mongodb://' + process.env.DATABASE_URL + ':' + process.env.DATABASE_PORT + '/';
-// url = 'mongodb://localhost:27017/'
+url = 'mongodb://localhost:27017/'
 console.log("Mongo url: " + url)
 
 
@@ -408,13 +408,13 @@ io.on('connection', (socket) => {
                         console.log(`isSorted Player: ${x.name} - ${x.gameData.score}`);
                     });
                     var scores = [];
-
+                    const totalPlayers = playersInGame.length;
                     for (var i = 0; i < 10; i++){
                         var player = playersInGame[i];
                         if (player){
-                            scores.push({name: player.name, score: player.gameData.score});
+                            scores.push({name: player.name, playerId: player.playerId ,score: player.gameData.score});
                         } else {
-                            scores.push({name: "", score: -1});
+                            scores.push({name: "", playerId: "", score: -1});
                         }
                     }
                     // for (var i = 0; i < playersInGame.length; i++) {
@@ -479,7 +479,11 @@ io.on('connection', (socket) => {
                     //         }
                     //     }
                     // }
-                    io.to(game.pin).emit('GameOver', scores);
+                    const result = {
+                        playerScores: scores,
+                        totalPlayers : totalPlayers
+                    };
+                    io.to(game.pin).emit('GameOver', result);
                 }
             });
         });
