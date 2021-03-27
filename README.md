@@ -28,6 +28,22 @@ docker run -d -p 27017:27017 mongo:4.2
 
 With Mongo Express you can import the game
 
+### Youtube and images/gifs
+
+# How to add a Youtube movie?
+
+This is an example:
+
+```
+<iframe width="420" height="315" type="text/html" src="https://www.youtube.com/embed/-ePDPGXkvlw?autoplay=1" frameborder="0" allow="autoplay"></iframe><br>Question?'
+```
+
+# How to add a image or gif?
+
+```
+<img src="URLTOWEBSITE" alt=""><br>Question?'
+```
+
 ### Todo
 
 - [ ] Styling
