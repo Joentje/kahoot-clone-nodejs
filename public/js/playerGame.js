@@ -33,7 +33,6 @@ function answerSubmitted(num){
         document.getElementById('answer4').style.visibility = "hidden";
         document.getElementById('message').style.display = "block";
         document.getElementById('message').innerHTML = "Answer Submitted! Waiting on other players...";
-        
     }
 }
 
