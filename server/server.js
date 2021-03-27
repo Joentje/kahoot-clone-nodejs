@@ -2,6 +2,8 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+const port = process.env.SERVER_PORT
+
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -12,9 +14,12 @@ const { LiveGames } = require('./utils/liveGames');
 const { Players } = require('./utils/players');
 
 const publicPath = path.join(__dirname, '../public');
-var app = express();
+const app = express();
+// const http = require('http')
+
 var server = http.createServer(app);
 var io = socketIO(server);
+// const io = require('socket.io')(server);
 var games = new LiveGames();
 var players = new Players();
 
@@ -30,9 +35,9 @@ console.log("Mongo url: " + url)
 
 app.use(express.static(publicPath));
 
-//Starting server on port 3000
-server.listen(3111, () => {
-    console.log("Server started on port 3000");
+//Starting server on port 
+server.listen(port, () => {
+    console.log("Server started on port "+port);
 });
 
 //When a connection to server is made from client
