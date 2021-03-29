@@ -175,7 +175,7 @@ io.on('connection', (socket) => {
             //If the pin is equal to one of the game's pin
             if (params.pin == games.games[i].pin) {
 
-                console.log('Player connected to game');
+                console.log(`Player ${params.name} connected to game`);
 
                 var hostId = games.games[i].hostId; //Get the id of host of game
 
