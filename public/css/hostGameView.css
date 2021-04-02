@@ -48,6 +48,7 @@ body {
 
 .square, .squaretxt {
     border: none;
+    border-radius: 10px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -74,6 +75,9 @@ body {
 }
 #questionNum{
     font-family: 'Tajawal', sans-serif;
+}
+#question {
+    text-align: center;
 }
 .winnerText {
     text-align: center;
