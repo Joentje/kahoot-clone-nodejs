@@ -23,8 +23,8 @@ docker run -d -p 27017:27017 mongo:4.2
 
 ### Mongodb
 
-- DB: kahootDB
-- Collection: kahootGames
+- DB: quiznowDB
+- Collection: quiznowGames
 
 With Mongo Express you can import the game
 

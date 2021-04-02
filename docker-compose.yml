@@ -10,7 +10,7 @@ services:
     networks:
       - quiznow_network
     environment:
-      - MONGO_INITDB_DATABASE=kahootDB
+      - MONGO_INITDB_DATABASE=quiznowDB
   quiznow:
     build: .
     image: jeroenslot/quiznow:latest
