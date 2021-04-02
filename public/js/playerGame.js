@@ -94,13 +94,13 @@ socket.on('playerGameData', function(data){
 });
 
 socket.on('GameOver', function(data){
-    console.log("socket id");
-    console.log(socket.id);
-    console.log(data);
+    // console.log("socket id");
+    // console.log(socket.id);
+    // console.log(data);
     const myPlace = data.playerScores.findIndex(x => x.playerId === socket.id);
     const me = data.playerScores[myPlace];
-    console.log(myPlace);
-    console.log(data.totalPlayers);
+    // console.log(myPlace);
+    // console.log(data.totalPlayers);
     document.body.style.backgroundColor = "#FFFFFF";
     document.getElementById('answer1').style.visibility = "hidden";
     document.getElementById('answer2').style.visibility = "hidden";
