@@ -113,8 +113,8 @@ io.on('connection', (socket) => {
         var oldHostId = data.id;
         var game = games.getGame(oldHostId);//Gets game with old host id
         if (game) {
-            console.log("first question in game");
-            console.log(JSON.stringify(game));
+            // console.log("first question in game");
+            // console.log(JSON.stringify(game));
             game.hostId = socket.id;//Changes the game host id to new host id
             socket.join(game.pin);
             var playerData = players.getPlayers(oldHostId);//Gets player in game
@@ -132,10 +132,10 @@ io.on('connection', (socket) => {
                 dbo.collection("kahootGames").find(query).toArray(function (err, res) {
                     if (err) throw err;
                     // document.getElementById('questionNum').innerHTML=`Question 1 / ${res[0].questions.length}`
-                    console.log(JSON.stringify(res));
-                    console.log(res[0].questions.length);
+                    // console.log(JSON.stringify(res));
+                    // console.log(res[0].questions.length);
                     var nrOfQuestions = res[0].questions.length;
-                    console.log("send socket nr of questions: " + nrOfQuestions);
+                    // console.log("send socket nr of questions: " + nrOfQuestions);
                     socket.emit("receivedTotalNrOfQuestions", { cur: 1, total: nrOfQuestions });
                     var question = res[0].questions[0].question;
                     var answer1 = res[0].questions[0].answers[0];
@@ -388,17 +388,17 @@ io.on('connection', (socket) => {
             var query = { id: parseInt(gameid) };
             dbo.collection("kahootGames").find(query).toArray(function (err, res) {
                 if (err) throw err;
-                console.log(game)
-                console.log(res)
-                console.log(res[0].questions.length)
+                // console.log(game)
+                // console.log(res)
+                // console.log(res[0].questions.length)
                 if (res[0].questions.length >= game.gameData.question) {
                     var questionNum = game.gameData.question;
                     questionNum = questionNum - 1;
 
                     var nrOfQuestions = res[0].questions.length;
-                    console.log("send socket nr of questions: " + nrOfQuestions);
-                    console.log("current question num: " + questionNum);
-                    console.log("current question num: " + game.gameData.question);
+                    // console.log("send socket nr of questions: " + nrOfQuestions);
+                    // console.log("current question num: " + questionNum);
+                    // console.log("current question num: " + game.gameData.question);
                     socket.emit("receivedTotalNrOfQuestions", { cur: game.gameData.question, total: nrOfQuestions });
 
                     var question = res[0].questions[questionNum].question;
@@ -425,16 +425,16 @@ io.on('connection', (socket) => {
                     // var third = { name: "", score: 0 };
                     // var fourth = { name: "", score: 0 };
                     // var fifth = { name: "", score: 0 };
-                    console.log(JSON.stringify(playersInGame));
-                    playersInGame.forEach(x => {
-                        console.log(`unSorted Player: ${x.name} - ${x.gameData.score}`);
-                    });
+                    // console.log(JSON.stringify(playersInGame));
+                    // playersInGame.forEach(x => {
+                    //     console.log(`unSorted Player: ${x.name} - ${x.gameData.score}`);
+                    // });
                     playersInGame.sort(function(a,b){
                         return b.gameData.score - a.gameData.score;
                     });
-                    playersInGame.forEach(x => {
-                        console.log(`isSorted Player: ${x.name} - ${x.gameData.score}`);
-                    });
+                    // playersInGame.forEach(x => {
+                    //     console.log(`isSorted Player: ${x.name} - ${x.gameData.score}`);
+                    // });
                     var scores = [];
                     const totalPlayers = playersInGame.length;
                     for (var i = 0; i < 10; i++){
