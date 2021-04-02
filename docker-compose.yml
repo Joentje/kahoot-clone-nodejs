@@ -16,8 +16,8 @@ services:
     image: jeroenslot/quiznow:latest
     networks:
       - quiznow_network
-    ports:
-      - 3111:3111
+    # ports:
+    #   - 3111:3111
   mongo-express:
     image: mongo-express:0.54.0
     environment:
@@ -30,8 +30,8 @@ services:
       - quiznow_network
     depends_on:
       - mongodb
-    ports:
-      - "7052:8081"
+    # ports:
+    #   - "7052:8081"
 
 networks:
   quiznow_network:
