@@ -70,6 +70,7 @@ This is an example:
 - [ ] ~Unify styling by Bootstrap~
 - [x] mongo-express credentials
 - [x] mount quiz data/mongo to host, persist data
+- [ ] add default .env files
 
 ## Screenshots
 
