@@ -27,7 +27,7 @@ body {
 }
 .answer {
     margin: auto;
-    padding: 30px 20px;
+    padding: 15px 20px;
     height: 50%;
     font-size: 20px;
     border-radius: 15px;
@@ -49,7 +49,7 @@ body {
 .square, .squaretxt {
     border: none;
     border-radius: 10px;
-    padding: 15px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: none;
