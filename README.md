@@ -70,6 +70,7 @@ This is an example:
 - [ ] refactor HTML/CSS/JS folders
 - [ ] ~Unify styling by Bootstrap~
 - [ ] mongo-express credentials
+- [ ] mount quiz data/mongo to host, persist data
 
 ## Screenshots
 
