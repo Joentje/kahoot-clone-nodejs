@@ -4,14 +4,14 @@ services:
     build:
       context: mongo
       dockerfile: Dockerfile
-    image: jeroenslot/kahoot-clone-nodejs-mongodb:latest
+    image: jeroenslot/quiznow-mongodb:latest
     networks:
       - quiznow_network
     environment:
       - MONGO_INITDB_DATABASE=kahootDB
-  kahoot:
+  quiznow:
     build: .
-    image: jeroenslot/kahoot-clone-nodejs:latest
+    image: jeroenslot/quiznow:latest
     networks:
       - quiznow_network
     ports:
@@ -22,8 +22,8 @@ services:
       - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
       - ME_CONFIG_MONGODB_SERVER=mongodb
       - ME_CONFIG_MONGODB_PORT=27017
-      - ME_CONFIG_BASICAUTH_USERNAME=${mongo_express_user}
-      - ME_CONFIG_BASICAUTH_PASSWORD=${mongo_express_pwd}
+      - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER}
+      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PWD}
     networks:
       - quiznow_network
     depends_on:

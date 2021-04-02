@@ -1,7 +1,10 @@
 version: '3.7'
 services:
   swag:
-    image: linuxserver/swag:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jeroenslot/quiznow-swag:latest
     cap_add:
       - NET_ADMIN
     container_name: swag
@@ -12,7 +15,7 @@ services:
       - URL=${DOMAIN}
       - SUBDOMAINS=${SUBDOMAIN}
       - VALIDATION=http \
-      - ONLY_SUBDOMAINS=false
+      - ONLY_SUBDOMAINS=${ONLYSUBDOMAINS}
     volumes:
       - ./config:/config
     restart: unless-stopped
