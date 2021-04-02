@@ -47,7 +47,7 @@ This is an example:
 ### Todo
 
 - [ ] Styling
-- [ ] HTTPS
+- [x] HTTPS
 - [x] Domain
 - [x] Host a kahoot somewhere else
 - [x] Questions left
@@ -57,10 +57,10 @@ This is an example:
 - [x] Create db and collection
 - [x] fancy up the white screens
 - [x] more fancy button on NextQuestion during gameHost
-- [ ] increase all font sizes
+- [x] increase all font sizes
 - [x] Multistage build and remove node_modules
 - [x] Ranks @player side
-- [ ] Create game, somewhere else
+- [x] Create game, somewhere else
 - [x] Cancel game button somewhere else
 - [ ] Favicon
 - [ ] make timer variable at quiz creation
@@ -68,7 +68,9 @@ This is an example:
 - [x] add credentials to mongo-express
 - [ ] cleanup readme
 - [ ] refactor HTML/CSS/JS folders
-- [ ] Unify styling by Bootstrap
+- [ ] ~Unify styling by Bootstrap~
+- [ ] mongo-express credentials
+- [ ] mount quiz data/mongo to host, persist data
 
 ## Screenshots
 
