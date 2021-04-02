@@ -1,0 +1,16 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" rx="3" id="svg_14" height="22.36985" width="21.24317" y="292.14083" x="390.5482" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" fill="#0082a3"/>
+  <text stroke="#000" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Montserrat Black'" font-size="24" id="svg_2" y="309.95937" x="390.52694" opacity="undefined" stroke-width="0" fill="#1b383f">Q</text>
+  <path transform="rotate(50 3.4581909179687726,305.2315673828125) " id="svg_3" d="m0.95822,307.6482l2.49996,-4.83326l2.49996,4.83326l-4.99993,0z" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#ed1010"/>
+  <ellipse rx="0.02488" id="svg_17" cy="314.20896" cx="414.34826" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#c1c12c" fill="#1b383f"/>
+  <ellipse ry="0.64677" rx="0.69652" id="svg_20" cy="0.64676" cx="411.53731" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#c1c12c" fill="#d60606"/>
+  <g id="svg_24">
+   <ellipse stroke="#c1c12c" ry="4.37811" rx="4.12935" id="svg_16" cy="301.51614" cx="400.73899" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" fill="#1b383f"/>
+   <path stroke="#c1c12c" transform="rotate(180 400.71527099609375,300.5823974609375) " id="svg_18" d="m398.40185,300.57524l2.31343,-2.97934l2.31343,2.97934l-1.15671,0l0,2.99368l-2.31343,0l0,-2.99368l-1.15671,0z" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" fill="#ffffff"/>
+   <ellipse stroke="#c1c12c" ry="0.95288" rx="0.97138" id="svg_22" cy="304.68109" cx="400.71412" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" fill="#93ffff"/>
+  </g>
+ </g>
+</svg>
