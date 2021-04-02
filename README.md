@@ -65,12 +65,11 @@ This is an example:
 - [ ] Favicon
 - [ ] make timer variable at quiz creation
 - [ ] Timer, custom timer per question?
-- [x] add credentials to mongo-express
 - [ ] cleanup readme
 - [ ] refactor HTML/CSS/JS folders
 - [ ] ~Unify styling by Bootstrap~
-- [ ] mongo-express credentials
-- [ ] mount quiz data/mongo to host, persist data
+- [x] mongo-express credentials
+- [x] mount quiz data/mongo to host, persist data
 
 ## Screenshots
 
